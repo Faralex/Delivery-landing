@@ -1,6 +1,7 @@
 const burger = document.querySelector(".section-header__burger");
 const menu = document.querySelector(".section-header__right");
 const firstRadio = document.querySelector("#radio1");
+const links = document.querySelectorAll(".nav-wrapper__item-link");
 
 firstRadio.checked = true;
 
@@ -15,6 +16,15 @@ burger.addEventListener("click", () => {
     console.log("not contains");
     showScroll();
   }
+});
+
+links.forEach((item) => {
+  item.addEventListener("click", () => {
+    let el = document.getElementsByClassName(item.getAttribute("data-link"));
+    Array.prototype.forEach.call(el, function (els) {
+      els.scrollIntoView({ behavior: "smooth" });
+    });
+  });
 });
 
 const hideScroll = () => {

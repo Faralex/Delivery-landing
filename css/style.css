@@ -118,6 +118,7 @@ body {
 .nav-wrapper__item-link {
   color: #000000;
   transition: 0.2s;
+  cursor: pointer;
 }
 .nav-wrapper__item-link:hover {
   opacity: 0.5;
@@ -207,7 +208,8 @@ body {
   position: relative;
   border: none;
 }
-.header-bottom__btn-wrapper a::before, .header-bottom__btn-wrapper a::after {
+.header-bottom__btn-wrapper a::before,
+.header-bottom__btn-wrapper a::after {
   border: 0 solid transparent;
   box-sizing: border-box;
   content: "";
@@ -226,7 +228,8 @@ body {
   border-top-width: 3px;
   border-right-width: 3px;
 }
-.header-bottom__btn-wrapper a:hover::before, .header-bottom__btn-wrapper a:hover::after {
+.header-bottom__btn-wrapper a:hover::before,
+.header-bottom__btn-wrapper a:hover::after {
   border-color: #0ea3f3;
   transition: border-color 0s, width 0.25s, height 0.25s;
   width: 100%;
@@ -482,13 +485,15 @@ body {
   width: 520px;
   margin-bottom: 160px;
 }
-.section-footer__location-text, .section-footer__email-text {
+.section-footer__location-text,
+.section-footer__email-text {
   color: #b1b1b1;
 }
 .section-footer__location-text {
   margin-top: 8px;
 }
-.section-footer__location, .section-footer__email {
+.section-footer__location,
+.section-footer__email {
   display: flex;
 }
 .section-footer__location-img {
@@ -565,7 +570,7 @@ body {
     display: block;
   }
   .section-menu__row :nth-child(2),
-.section-menu__row :nth-child(3) {
+  .section-menu__row :nth-child(3) {
     display: none;
   }
   .item-menu:not(:last-child) {
@@ -603,7 +608,8 @@ body {
     top: 10px;
     transition: 0.3s ease;
   }
-  .section-header__burger:before, .section-header__burger:after {
+  .section-header__burger:before,
+  .section-header__burger:after {
     content: "";
     background-color: #000000;
     position: absolute;
@@ -700,13 +706,15 @@ body {
     font-size: 14px;
     text-align: center;
   }
-  .section-footer__location-img, .section-footer__email-img {
+  .section-footer__location-img,
+  .section-footer__email-img {
     margin: 0;
   }
   .section-footer__email-img {
     margin-bottom: 20px;
   }
-  .section-footer__location, .section-footer__email {
+  .section-footer__location,
+  .section-footer__email {
     display: block;
     text-align: center;
     margin-bottom: 20px;
@@ -739,5 +747,13 @@ body {
   .section-menu:after {
     content: "";
     display: none;
+  }
+}
+
+@media (max-height: 350px) {
+  .nav-wrapper li a {
+    display: block;
+    font-size: 10px;
+    margin: 1px;
   }
 }
